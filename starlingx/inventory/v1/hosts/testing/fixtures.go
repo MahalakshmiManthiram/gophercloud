@@ -57,6 +57,7 @@ var (
 		MaxCPUMhzConfigured:  "1800",
 		AppArmor:             "disabled",
 		HwSettle:             "0",
+    AppArmor2:             "disabled",
 	}
 	HostDerp = hosts.Host{
 		ID:           "f73dda8e-be3c-4704-ad1e-ed99e44b846e",
@@ -90,6 +91,7 @@ var (
 		MaxCPUMhzConfigured:  "2400",
 		AppArmor:             "disabled",
 		HwSettle:             "0",
+    AppArmor2:             "disabled",
 	}
 	HostMerp = hosts.Host{
 		ID:           "66b62c51-974b-4bcc-b273-e8365833157e",
@@ -131,6 +133,7 @@ const HostsListBody = `
       "administrative": "unlocked",
       "apparmor": "disabled",
       "hw_settle": "0",
+      "apparmor2": "disabled",
       "availability": "online",
       "bm_ip": null,
       "bm_type": null,
@@ -198,6 +201,7 @@ const HostsListBody = `
       "administrative": "locked",
       "apparmor": "disabled",
       "hw_settle": "0",
+      "apparmor2": "disabled",
       "availability": "online",
       "bm_ip": null,
       "bm_type": null,
@@ -334,6 +338,7 @@ const SingleHostBody = `
       "administrative": "locked",
       "apparmor": "disabled",
       "hw_settle": "0",
+      "apparmor2": "disabled",
       "availability": "online",
       "bm_ip": null,
       "bm_type": null,
@@ -443,6 +448,7 @@ func HandleHostCreationSuccessfully(t *testing.T, response string) {
 		th.TestJSONRequest(t, r, `{
           "apparmor": "disabled",
           "hw_settle": "0",
+          "apparmor2": "disabled",
           "console": "tty0",
           "hostname": "controller-1",
           "install_output": "graphic",

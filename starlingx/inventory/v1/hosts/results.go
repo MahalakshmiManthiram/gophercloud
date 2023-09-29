@@ -207,6 +207,9 @@ type Host struct {
 
 	// HwSettle defines the wait time for SCSI devices to show up.
 	HwSettle string `json:"hw_settle,omitempty"`
+
+	// AppArmor2 is the additional security model on the host
+	AppArmor2 string `json:"apparmor2,omitempty"`
 }
 
 // HostPage is the page returned by a pager when traversing over a
